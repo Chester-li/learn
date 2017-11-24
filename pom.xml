@@ -8,8 +8,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>resteasy</module>
-        <module>restful</module>
-        <module>newweb</module>
+        <module>resteasyhelloworld</module>
     </modules>
 
 </project>
