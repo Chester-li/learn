@@ -9,6 +9,16 @@
     <modules>
         <module>resteasy</module>
         <module>resteasyhelloworld</module>
+        <module>gson</module>
     </modules>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.14</version>
+        </dependency>
+    </dependencies>
 
 </project>
