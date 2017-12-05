@@ -10,6 +10,8 @@
         <module>resteasy</module>
         <module>resteasyhelloworld</module>
         <module>gson</module>
+        <module>java8</module>
+        <module>poi</module>
     </modules>
 
 
