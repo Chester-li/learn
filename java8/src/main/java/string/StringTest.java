@@ -9,16 +9,8 @@ public class StringTest {
     public static void main(String[] args) {
         String s = ",";
         List<String> strings = Splitter.on(",").splitToList(s);
-        System.out.println(strings+" "+strings.size());
-//        String[] stringArr = s.split(",");
-//        System.out.println(JsonUtil.toJson(stringArr));
-//        Iterable<String> split = Splitter.on(s).trimResults().split(",");
-//        System.out.println(split);
-//        System.out.println("============");
-//        char splitChar = ',';
-//        strings = Splitter.on(splitChar).splitToList(s);
-//        System.out.println(strings+" "+strings.size());
-
+        strings.stream().forEach(item -> System.out.println("==="+item+"==="));
+        System.out.println(s.split(",").length);
         String testLimit = "aaa,bb,cc,,";
         System.out.println(Lists.newArrayList(testLimit.split(s)));
         System.out.println(Lists.newArrayList(testLimit.split(s , 7)));
