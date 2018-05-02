@@ -2,7 +2,7 @@ package principle;
 
 public class DIPPrinciple {
     public static void main(String[] args) {
-        distributionlock.Player player = new distributionlock.Player();
+        Player player = new Player();
         BasketBall basketBall = new BasketBall();
         player.play(basketBall);
 
