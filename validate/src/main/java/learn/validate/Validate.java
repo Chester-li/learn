@@ -1,6 +1,7 @@
 package learn.validate;
 
 import org.apache.commons.lang.StringUtils;
+import org.hibernate.validator.HibernateValidator;
 
 import java.util.Objects;
 import java.util.Set;
@@ -8,7 +9,6 @@ import java.util.Set;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
 
 /**
  * @author chaoshuai.li
@@ -22,10 +22,32 @@ public class Validate {
      */
     private static final Validator validator;
 
+    /**
+     * 参考代码：
+     *
+     */
     static {
-        ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
-        validator = validatorFactory.getValidator();
+        /**
+         * 1. 采用默认的validateFactory生成 引入hibernate-validator 之后依然使用hibernate-validator做校验
+         */
+//        ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
+//        validator = validatorFactory.getValidator();
+        /**
+         * 2. 采用声明类的方式显示声明使用HibernateValidator的validator
+         */
+        validator = Validation.byProvider(HibernateValidator.class).configure().failFast(true)
+                .buildValidatorFactory()
+                .getValidator();
+        /**
+         * 3. 如果使用 spring的话 可以采用如下方注入
+         */
+//        <bean id = "validator"
+//            class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" >
+//        <property name = "providerClass"
+//            value = "org.hibernate.validator.HibernateValidator" / >
+//        </bean >
     }
+
 
     public static String validate(Object arg) {
         if (Objects.isNull(arg)) {
