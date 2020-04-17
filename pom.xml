@@ -23,6 +23,8 @@
         <module>spock</module>
         <module>rocketMQ</module>
         <module>validate</module>
+        <module>java</module>
+        <module>algorithm</module>
     </modules>
 
 
