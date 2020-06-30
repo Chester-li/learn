@@ -17,6 +17,7 @@ public class TestBlock {
     static class Consumer extends Thread {
         private int index = 0;
 
+        @Override
         public void run() {
             for (int i = 0; i < 10; i++) {
                 try {

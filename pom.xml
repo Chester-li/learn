@@ -25,6 +25,8 @@
         <module>validate</module>
         <module>java</module>
         <module>algorithm</module>
+        <module>struct</module>
+        <module>fastjson</module>
     </modules>
 
 
