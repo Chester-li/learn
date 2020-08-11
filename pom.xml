@@ -27,6 +27,7 @@
         <module>algorithm</module>
         <module>struct</module>
         <module>fastjson</module>
+        <module>jvm</module>
     </modules>
 
 
