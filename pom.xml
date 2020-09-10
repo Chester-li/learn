@@ -28,6 +28,7 @@
         <module>struct</module>
         <module>fastjson</module>
         <module>jvm</module>
+        <module>proxy</module>
     </modules>
 
 
