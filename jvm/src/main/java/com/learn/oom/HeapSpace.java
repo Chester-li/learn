@@ -9,7 +9,7 @@ public class HeapSpace {
 
     public static void main(String[] args) {
         //-Xms10m -Xmx10m  初始化堆内存和最大堆内存都是 10m
-        byte[] array = new byte[12 * 1024 * 1024];
+        byte[] array = new byte[2 * 1024 * 1024];
         //result : Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
     }
 

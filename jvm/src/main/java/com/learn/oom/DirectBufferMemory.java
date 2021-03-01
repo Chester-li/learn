@@ -1,7 +1,5 @@
 package com.learn.oom;
 
-import sun.misc.VM;
-
 import java.nio.ByteBuffer;
 
 /**
@@ -16,13 +14,13 @@ public class DirectBufferMemory {
 //   4. 但如果不断分配本地内存，堆内存很少使用，那么 JVM 就不需要执行 GC ，DirectByteBuffer 对象们就不会被回收，这时候堆内存充足，但本地内存可能已经用光了，再次尝试分配本地内存就会出现 OutOfMemory ，程序直接崩溃
 
     public static void main(String[] args) {
-        System.out.println("maxDirectMemory : "+ VM.maxDirectMemory()/(double)1024/ 1024 +"M");
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(6 * 1024 * 1024);
+//        System.out.println("maxDirectMemory : "+ VM.maxDirectMemory()/(double)1024/ 1024 +"M");
+//        try {
+//            Thread.sleep(300);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(6 * 1024 * 1024);
     }
 
     //result : Exception in thread "main" java.lang.OutOfMemoryError: Direct buffer memory
