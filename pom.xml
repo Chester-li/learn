@@ -11,7 +11,6 @@
         <module>resteasyhelloworld</module>
         <module>gson</module>
         <module>java8</module>
-        <module>poi</module>
         <module>design</module>
         <module>spring</module>
         <module>concurrent</module>
@@ -32,6 +31,9 @@
         <module>effektif</module>
     </modules>
 
+    <properties>
+        <junit.version>4.13.1</junit.version>
+    </properties>
 
     <dependencies>
         <dependency>
