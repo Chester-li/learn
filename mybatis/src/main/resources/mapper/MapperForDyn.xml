@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
+<mapper namespace="com.learn.mybatis.dao.EmployeeDynDao">
+    <select id="findById" resultType="com.learn.mybatis.pojo.Employee">
+        select * from employee where id = #{id}
+    </select>
+
+    <select id="findAll" resultType="com.learn.mybatis.pojo.Employee">
+        select * from employee
+    </select>
+
+    <insert id="insert" parameterType="com.learn.mybatis.pojo.Employee">
+        INSERT  INTO employee (user_name, age, sex, birthday, created, updated) values (#{userName}, #{age}, #{sex}, #{birthday}, #{created} , #{updated})
+    </insert>
+
+    <delete id="deleteById">
+        delete from employee where id = #{id}
+    </delete>
+
+    <update id="update" parameterType="com.learn.mybatis.pojo.Employee">
+        update employee
+        <trim prefix="set">
+            <if test="userName != null"> user_name = #{userName}, </if>
+            <if test="birthday != null"> birthday = #{birthday}, </if>
+        </trim>
+        age = #{age},
+        sex = #{sex},
+        updated = #{updated}
+        where (id = #{id})
+    </update>
+
+</mapper>
