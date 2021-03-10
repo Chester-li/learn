@@ -37,8 +37,8 @@
             </dataSource>
         </environment>
     </environments>
-    <mappers>
-        <mapper resource="mapper/MyMapper.xml" />
-        <mapper resource="mapper/MapperForDyn.xml"/>
-    </mappers>
+<!--    <mappers>-->
+<!--        <mapper resource="mapper/MyMapper.xml" />-->
+<!--        <mapper resource="mapper/MapperForDyn.xml"/>-->
+<!--    </mappers>-->
 </configuration>
