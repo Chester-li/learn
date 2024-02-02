@@ -34,7 +34,7 @@
         <junit.version>4.13.1</junit.version>
         <jackson.version>2.9.10.7</jackson.version>
         <guava.version>24.1-jre</guava.version>
-        <spring.version>4.3.21.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
     </properties>
 
     <dependencies>
